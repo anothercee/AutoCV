@@ -31,18 +31,22 @@ AutoCV/
 1. Clone repository ini:
 ```bash
 git clone https://github.com/username/AutoCV.git
-2. Buka folder project:
+2. Buka Folder Project:
+```bash
 cd AutoCV
-3. Buka file index.html di browser untuk mencoba aplikasi.
+3. Buka Fila index.html di browser untuk mencoba aplikasi:
+```bash
 Jika ingin mengubah database pekerjaan, edit file jobs.json
+
+---
 
 ## 🔹 Penutup
 
 Terima kasih telah menggunakan **AutoCV**.  
 Aplikasi ini dibuat sebagai proyek pembelajaran dan demonstrasi pembuatan CV otomatis serta rekomendasi pekerjaan berbasis web.
 
-**Pembuat:** Dinda & Sesya 
-**Kontak:** [echakirani@05@gmail.com] or [febyankadinda@gmail.com]  
+**Pembuat:** Ssycha  
+**Kontak:** [email@example.com](mailto:email@example.com)  
 
 Jika Anda memiliki saran, kritik, atau ide pengembangan lebih lanjut, silakan hubungi saya melalui email atau buat issue di repository ini.  
 
