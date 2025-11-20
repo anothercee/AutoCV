@@ -14,8 +14,7 @@
 </header>
 
 <main>
-    <!-- Form Input -->
-    <section id="form-section">
+    <section id="form-section" class="animated-section">
         <h2>Masukkan Data Diri</h2>
         <form id="cv-form">
             <label>Nama Lengkap:</label>
@@ -54,21 +53,18 @@
         </form>
     </section>
 
-    <!-- Preview CV -->
-    <section id="preview-section">
+    <section id="preview-section" class="animated-section">
         <h2>Preview CV</h2>
         <div id="cv-preview"></div>
         <button id="download-btn">Download PDF</button>
     </section>
 
-    <!-- Rekomendasi Pekerjaan -->
-    <section id="jobs-section">
+    <section id="jobs-section" class="animated-section">
         <h2>Rekomendasi Pekerjaan</h2>
         <div id="job-recommendations"></div>
     </section>
 
-    <!-- Cover Letter Otomatis -->
-    <section id="coverletter-section">
+    <section id="coverletter-section" class="animated-section">
         <h2>Cover Letter Otomatis</h2>
         <div id="cover-letter"></div>
     </section>
@@ -76,6 +72,20 @@
 
 <script type="module" src="script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+// Animasi slide-in saat scroll
+const sections = document.querySelectorAll('.animated-section');
+function revealOnScroll() {
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if(top < windowHeight - 100) {
+      section.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+</script>
 </body>
 </html>
-
