@@ -36,8 +36,6 @@ cd AutoCV
 3. Buka file index.html di browser untuk mencoba aplikasi.
 Jika ingin mengubah database pekerjaan, edit file jobs.json
 
----
-
 ## 🔹 Penutup
 
 Terima kasih telah menggunakan **AutoCV**.  
