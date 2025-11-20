@@ -1,91 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AutoCV - CV Builder & Job Recommendation</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCV - CV Builder</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <h1>AutoCV</h1>
-    <p>CV Builder & Job Recommendation</p>
-</header>
+    <header>
+        <h1>AutoCV - CV Builder & Job Recommendation</h1>
+    </header>
 
-<main>
-    <section id="form-section" class="animated-section">
-        <h2>Masukkan Data Diri</h2>
-        <form id="cv-form">
-            <label>Nama Lengkap:</label>
-            <input type="text" id="name" required>
+    <main>
+        <!-- Form Input Data Diri -->
+        <section id="form-section">
+            <h2>Masukkan Data Diri</h2>
+            <form id="cv-form">
+                <label>Nama Lengkap:</label>
+                <input type="text" id="name" required>
 
-            <label>Email:</label>
-            <input type="email" id="email" required>
+                <label>Email:</label>
+                <input type="email" id="email" required>
 
-            <label>Telepon:</label>
-            <input type="text" id="phone" required>
+                <label>Telepon:</label>
+                <input type="text" id="phone" required>
 
-            <label>Pendidikan:</label>
-            <select id="education">
-                <option value="SMA">SMA</option>
-                <option value="D3">D3</option>
-                <option value="S1">S1</option>
-                <option value="S2">S2</option>
-            </select>
+                <label>Pendidikan:</label>
+                <select id="education">
+                    <option value="SMA">SMA</option>
+                    <option value="D3">D3</option>
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                </select>
 
-            <label>Jurusan:</label>
-            <input type="text" id="major">
+                <label>Jurusan:</label>
+                <input type="text" id="major">
 
-            <label>Pengalaman Kerja:</label>
-            <textarea id="experience"></textarea>
+                <label>Pengalaman Kerja:</label>
+                <textarea id="experience"></textarea>
 
-            <label>Skill (pisahkan dengan koma):</label>
-            <input type="text" id="skills">
+                <label>Skill (pisahkan dengan koma):</label>
+                <input type="text" id="skills">
 
-            <label>Minat / Hobi:</label>
-            <input type="text" id="hobbies">
+                <label>Minat / Hobi:</label>
+                <input type="text" id="hobbies">
 
-            <label>Lokasi Kerja:</label>
-            <input type="text" id="location">
+                <button type="submit">Generate CV & Rekomendasi</button>
+            </form>
+        </section>
 
-            <button type="submit">Generate CV & Rekomendasi</button>
-        </form>
-    </section>
+        <!-- Preview CV -->
+        <section id="preview-section">
+            <h2>Preview CV</h2>
+            <div id="cv-preview"></div>
+        </section>
 
-    <section id="preview-section" class="animated-section">
-        <h2>Preview CV</h2>
-        <div id="cv-preview"></div>
-        <button id="download-btn">Download PDF</button>
-    </section>
+        <!-- Rekomendasi Pekerjaan -->
+        <section id="jobs-section">
+            <h2>Rekomendasi Pekerjaan</h2>
+            <div id="job-recommendations"></div>
+        </section>
+    </main>
 
-    <section id="jobs-section" class="animated-section">
-        <h2>Rekomendasi Pekerjaan</h2>
-        <div id="job-recommendations"></div>
-    </section>
-
-    <section id="coverletter-section" class="animated-section">
-        <h2>Cover Letter Otomatis</h2>
-        <div id="cover-letter"></div>
-    </section>
-</main>
-
-<script type="module" src="script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script>
-// Animasi slide-in saat scroll
-const sections = document.querySelectorAll('.animated-section');
-function revealOnScroll() {
-  sections.forEach(section => {
-    const top = section.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-    if(top < windowHeight - 100) {
-      section.classList.add('visible');
-    }
-  });
-}
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
-</script>
+    <script src="script.js"></script>
 </body>
-</html>
+                    </html>
+                
