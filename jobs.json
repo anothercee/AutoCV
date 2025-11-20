@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Web Developer",
+    "company": "TechCorp",
+    "skills": ["HTML", "CSS", "JS"],
+    "education": ["S1"]
+  },
+  {
+    "title": "Data Analyst",
+    "company": "DataSolve",
+    "skills": ["Excel", "SQL", "Python"],
+    "education": ["S1","S2"]
+  },
+  {
+    "title": "Graphic Designer",
+    "company": "CreativeStudio",
+    "skills": ["Photoshop","Illustrator"],
+    "education": ["S1","D3"]
+  }
+]
