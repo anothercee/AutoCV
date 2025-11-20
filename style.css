@@ -1,15 +1,19 @@
+/* ===== style.css ===== */
+
 /* Font & Basic Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background: #f0f2f5;
+    background: #fff9f6; /* pastel peach */
     margin: 0;
     color: #333;
+    overflow-x: hidden;
 }
 header {
-    background: #007bff;
-    color: white;
+    background: #a8dadc; /* pastel biru */
+    color: #1d3557;
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 header p {
     margin: 0.5rem 0 0;
@@ -23,18 +27,16 @@ main {
     gap: 2rem;
     padding: 2rem;
 }
-#form-section, #preview-section {
+
+/* Section Styles */
+#form-section, #preview-section, #jobs-section, #coverletter-section {
     background: #ffffff;
     padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-#jobs-section, #coverletter-section {
-    grid-column: span 2;
-    background: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.8s ease;
 }
 
 /* Form Styles */
@@ -45,43 +47,44 @@ form label {
 }
 input, select, textarea {
     width: 100%;
-    padding: 0.6rem;
+    padding: 0.7rem;
     margin-top: 0.3rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: 0.3s;
 }
 input:focus, select:focus, textarea:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+    border-color: #f4a261; /* pastel orange */
+    box-shadow: 0 0 8px rgba(244,162,97,0.4);
 }
 button {
-    margin-top: 1rem;
+    margin-top: 1.2rem;
     padding: 0.8rem 1.5rem;
-    background: #28a745;
-    color: white;
+    background: #f4a261; /* pastel orange */
+    color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     font-weight: 500;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 button:hover {
-    background: #218838;
+    background: #e76f51; /* sedikit lebih gelap */
     transform: scale(1.05);
 }
 
 /* CV Preview */
 #cv-preview {
-    background: #ffffff;
-    border-left: 5px solid #007bff;
+    background: #ffe5d9; /* pastel peach */
+    border-left: 6px solid #f4a261;
     padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.5s;
 }
 #cv-preview h3 {
     margin-top: 0;
-    color: #007bff;
+    color: #e76f51;
 }
 #cv-preview p {
     margin: 0.3rem 0;
@@ -89,32 +92,44 @@ button:hover {
 
 /* Job Recommendations */
 .job-card {
-    background: white;
-    border-radius: 8px;
+    background: #caf0f8; /* pastel biru muda */
+    border-radius: 12px;
     padding: 1rem;
     margin-bottom: 1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    transition: 0.4s;
 }
 .job-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 .job-card strong {
-    color: #007bff;
+    color: #0077b6; /* biru lebih gelap */
 }
 
 /* Cover Letter */
 #cover-letter {
-    background: #ffffff;
+    background: #f1faee; /* pastel mint */
     padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Animasi Slide-In */
+.animated-section {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+.animated-section.visible {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
+        padding: 1rem;
     }
 }
