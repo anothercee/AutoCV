@@ -31,9 +31,11 @@ AutoCV/
 1. Clone repository ini:
 ```bash
 git clone https://github.com/username/AutoCV.git
+
 2. Buka Folder Project:
 ```bash
 cd AutoCV
+
 3. Buka Fila index.html di browser untuk mencoba aplikasi:
 ```bash
 Jika ingin mengubah database pekerjaan, edit file jobs.json
